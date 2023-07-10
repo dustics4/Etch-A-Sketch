@@ -4,6 +4,11 @@
 // borders and margins adjust the size of the squares
 
 const container = document.querySelector('.container');
+const square = document.getElementsByClassName('.square');
+let nothingness = false;
+
+container.addEventListener('mouseover'  , addColor);
+
 
 createGrid();
 
@@ -13,7 +18,7 @@ function createGrid()  {
         for (let col = 0; col < 16; col++) {
           // Create a new div element for each cell
           const cell = document.createElement("div");
-          cell.classList.add('square');
+          cell.classList.add("square");
           
           // Add any desired CSS styles to the cell
           cell.style.width = "50px";
@@ -23,29 +28,26 @@ function createGrid()  {
       
           // Append the cell to the grid container
           container.appendChild(cell);
+
         }
       }
 }
 
-// Being able to declare all of the squares within the grid
-const hoverSquare = document.getElementsByClassName('.square');
 
+function addColor(e) {
+  if (nothingness === true) {
+    e.target.style.backgroundColor = "black";
+  } else {
+    e.target.style.backgroundColor = "black";
 
-
-for (let i = 0; i < hoverSquare.length; i++) {
-
-    hoverSquare.addEventListener('mouseenter' , function(){
-        hoverSquare.style.backgroundColor = "black";
-    })
+  }
 }
 
 
 //Creating a function to hover over the square
-
-
 //create a function for hovering over.
-// Implement into into the function createGrid
-// Create function name , add event listener in the function
-// Go back to CreateGrid, call the function with cell.function
+// Implement into into the function addColor
+//create event listener that takes function
+// Go back to addColor , create a bool that will make sure the color shows
 
 //Somehow, you need to iterate over the array (each DOM div array), and apply the listener to each of its elements.
