@@ -1,0 +1,8 @@
+.container {
+    margin: 0;
+    min-width: 900px;
+
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
