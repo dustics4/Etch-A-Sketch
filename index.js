@@ -7,10 +7,9 @@ const container = document.querySelector('.container');
 const square = document.getElementsByClassName('.square');
 let nothingness = false;
 
-container.addEventListener('mouseover'  , addColor);
-
 
 createGrid();
+
 
 // Create the grid
 function createGrid()  {
@@ -33,15 +32,26 @@ function createGrid()  {
       }
 }
 
-
-function addColor(e) {
-  if (nothingness === true) {
-    e.target.style.backgroundColor = "black";
-  } else {
-    e.target.style.backgroundColor = "black";
-
-  }
+for(let i = 0; i < square.length; i++) {
+  square[i].addEventListener([click] 
+    (function() {
+      square[i].textContent;
+      square.target.style.backgroundColor="black";
+    }));
 }
+
+
+
+//container.addEventListener('mouseover'  , addColor);
+// function addColor(e) {
+//   if (nothingness === true) {
+//     e.target.style.backgroundColor = "black";
+//     console.log("black");
+//   } else {
+//     e.target.style.backgroundColor = "black";
+//     console.log("white");
+//   }
+// }
 
 
 //Creating a function to hover over the square
