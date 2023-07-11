@@ -4,17 +4,15 @@
 // borders and margins adjust the size of the squares
 
 const container = document.querySelector('.container');
-const square = document.getElementsByClassName('.square');
-let nothingness = false;
+const newButton = document.querySelector('.newRound')
 
-
-createGrid();
 
 
 // Create the grid
-function createGrid()  {
-    for (let row = 0; row < 16; row++) {
-        for (let col = 0; col < 16; col++) {
+function createGrid(height = 16, width =16)  {
+    //Make a row and column for each height or width
+    for (let row = 0; row < height; row++) {
+        for (let col = 0; col < width; col++) {
           // Create a new div element for each cell
           const cell = document.createElement("div");
           cell.classList.add("square");
@@ -36,4 +34,17 @@ function createGrid()  {
         }
       }
 }
+
+newButton.addEventListener('click' , (e) => {
+  const gridCol = Number.parseInt(prompt("Enter the amount of grid Columns : ")) ;
+  const gridRows = Number.parseInt(prompt("Enter the amount of grid rows  : ")) ;
+
+  container.innerHTML = "";
+  //Take input and create the grid
+  createGrid(gridCol, gridRows);
+
+} );
+
+
+createGrid();
 

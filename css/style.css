@@ -11,7 +11,7 @@ body {
 
 .container-wrap {
     margin: 0;
-    min-width: 900px;
+   
 
     position: relative;
     display: flex;
@@ -23,8 +23,14 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    max-width: 1000px;
 }
 
 .square {
     background-color: white;
+}
+
+.newRound {
+    padding: 10px 15px;
+    margin-bottom: 20px;
 }
