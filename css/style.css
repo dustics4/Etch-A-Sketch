@@ -1,8 +1,30 @@
-.container {
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+.container-wrap {
     margin: 0;
     min-width: 900px;
 
     position: relative;
     display: flex;
+   
+}
+
+.container {
+    position: relative;
+    display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.square {
+    background-color: white;
 }

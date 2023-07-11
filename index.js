@@ -24,6 +24,11 @@ function createGrid()  {
           cell.style.height = "50px";
           cell.style.border = "1px solid black";
           cell.style.display = "flex";
+
+          //Adding a hover effect
+          cell.addEventListener('mouseover' , (e) => {
+            e.target.style.backgroundColor = "black";
+          });
       
           // Append the cell to the grid container
           container.appendChild(cell);
@@ -32,32 +37,3 @@ function createGrid()  {
       }
 }
 
-for(let i = 0; i < square.length; i++) {
-  square[i].addEventListener([click] 
-    (function() {
-      square[i].textContent;
-      square.target.style.backgroundColor="black";
-    }));
-}
-
-
-
-//container.addEventListener('mouseover'  , addColor);
-// function addColor(e) {
-//   if (nothingness === true) {
-//     e.target.style.backgroundColor = "black";
-//     console.log("black");
-//   } else {
-//     e.target.style.backgroundColor = "black";
-//     console.log("white");
-//   }
-// }
-
-
-//Creating a function to hover over the square
-//create a function for hovering over.
-// Implement into into the function addColor
-//create event listener that takes function
-// Go back to addColor , create a bool that will make sure the color shows
-
-//Somehow, you need to iterate over the array (each DOM div array), and apply the listener to each of its elements.
